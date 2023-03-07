@@ -38,7 +38,9 @@
                                 </form>
                             </div>
                             <div class="col-4">
-                                Qr Code Image
+                                @if(session('code'))
+                                    {{session('code')}}
+                                @endif
                             </div>
                         </div>
                     </div>
