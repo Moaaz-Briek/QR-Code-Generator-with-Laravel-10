@@ -1,0 +1,9 @@
+Composer create laravel/laravel laravel_qr_code
+composer require laravel/ui
+php artisan ui bootstrap --auth
+npm install
+npm run build
+
+=============simplesoftware.io===================
+composer require simplesoftwareio/simple-qrcode
+php artisan make:controller QrController
