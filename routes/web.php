@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [QrController::class, 'index']);
+Route::post('/qr-builder', [QrController::class, 'do_qr_builder'])->name('do_qr_builder');
