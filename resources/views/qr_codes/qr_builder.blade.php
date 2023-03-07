@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -13,8 +12,35 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-
-                        Qr code
+                        <div class="row">
+                            <div class="col-8">
+                                <form method="post" action="{{route('do_qr_builder')}}">
+                                    @csrf
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" name="name" value="{{old('name')}}" class="form-control">
+                                        @error('name')
+                                            <span class="text-danger">{{$message}}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="body">Body</label>
+                                        <input type="text" name="body" value="{{old('body')}}" class="form-control">
+                                        @error('body')
+                                        <span class="text-danger">{{$message}}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <button type="submit" name="submit" class="btn btn-primary">
+                                            Generate Qr Code
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-4">
+                                Qr Code Image
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
