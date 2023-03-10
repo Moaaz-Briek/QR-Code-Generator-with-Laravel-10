@@ -1,0 +1,31 @@
+body {
+    background: #323946 !important;
+}
+
+.navbar {
+    background: #0beed4;
+}
+
+.card{
+    background: #dbe7fc !important;
+}
+
+input, textarea, select{
+    background: #dbe7fc !important;
+}
+
+.image_holder {
+    background: #f2f3f5;
+}
+
+.video {
+    padding: 5px;
+    background: #323946 !important;
+    height: 490px;
+    width: 100%;
+}
+
+#output {
+    resize: none;
+    background: #939ca9 !important;
+}
